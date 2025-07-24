@@ -22,3 +22,6 @@ These datasets can be used for purposes ranging from EDA to model training.
 * Get the domain boardbyte.space
 
 probably vercel for now is fine.
+
+
+* Should I do format conversion? Or just instructions for now good enough.
