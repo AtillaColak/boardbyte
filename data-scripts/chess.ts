@@ -9,7 +9,7 @@ enum LichessVariant {
 }
 
 
-function installer(variant: LichessVariant): string[] {
+export function installer(variant: LichessVariant): string[] {
   const now = new Date();
   const prevYear = now.getFullYear() - 1;
   let urls: string[] = [];
