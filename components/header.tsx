@@ -5,7 +5,7 @@ export default function Header() {
                 BoardByte
             </div>
             <div className="text-lg">
-                Free real-time data for your favorite tabletop.
+                Free up-to-date game data for your favorite tabletop.
             </div>
         </div>
     );
