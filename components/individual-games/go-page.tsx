@@ -3,8 +3,15 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Database, GamepadIcon, HardDrive } from "lucide-react"
-import Image from "next/image";
-import GoBoardIcon from "@/public/go-board-09x09-stones.svg";
+
+async function fetchGoGames() {
+  const res = await fetch("http://localhost:3000/api/go");
+  if (!res.ok) {
+    console.log(res); 
+    console.error("Failed to fetch Go games data");
+  }
+  return res.json();
+}
 
 export default function GoComponent() {
   return (

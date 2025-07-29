@@ -1,23 +1,9 @@
-import { fetch } from "undici";
 import fs from "fs"; 
 import path from "path"; 
 import { JSDOM } from "jsdom";
 
 async function getLastGameId(): Promise<number> {
-  const res = await fetch("https://ps.waltheri.net/database/");
-  const html = await res.text();
-  const dom = new JSDOM(html);
-  const anchor = dom.window.document.querySelector(
-    "#games-list > div > div:nth-child(1) > div > div.game-info > h4 > a.expand-link.pull-right"
-  );
-
-  if (!anchor) throw new Error("Could not find last game anchor.");
-
-  const href = anchor.getAttribute("href") || "";
-  const match = href.match(/\/(\d+)\//);
-  if (!match) throw new Error("Invalid href format.");
-
-  return parseInt(match[1], 10);
+  return 86139; // hardcoded for now. Later dynamically fetch. Or trying counting upwards. Bad method.
 }
 
 async function downloadGame(id: number): Promise<void> {
@@ -30,8 +16,8 @@ async function downloadGame(id: number): Promise<void> {
 
   const text = await res.text();
 
-  if (!text.includes("SZ[") || text.includes("Game not found")) {
-    console.warn(`Invalid SGF for ID ${id}`);
+  if (!text.includes("info")) {
+    console.warn(`Game ID ${id} not found or invalid SGF format`);
     return;
   }
 

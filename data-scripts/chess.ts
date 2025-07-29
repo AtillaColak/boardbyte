@@ -1,4 +1,4 @@
-enum LichessVariant {
+export enum LichessVariant {
   Antichess = "antichess",
   Atomic = "atomic",
   Chess960 = "chess960",
