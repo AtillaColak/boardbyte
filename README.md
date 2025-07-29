@@ -3,17 +3,20 @@ create real-time datasets for your favorite tabletop game with boardbyte (chess,
 
 These datasets can be used for purposes ranging from EDA to model training. 
 
+May be helpful: https://github.com/leomaurodesenv/game-datasets?tab=readme-ov-file#video_game-awesome-game-datasets-
+
 ## Games supported so far 
 * Chess
-* Backgammon
 * Go 
-* Checkers
 * Connect Four
 
+
+## To Support
+* Checkers
+* Backgammon
 * Uno
 * Catan
 * Battleship
-
 * Sudoku
 
 ## TODO 
@@ -24,3 +27,8 @@ These datasets can be used for purposes ranging from EDA to model training.
 probably vercel for now is fine.
 
 * make it responsive.
+
+
+
+* backend api integration for chess + go, go script testing
+* Overall dataset research

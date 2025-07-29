@@ -1,5 +1,7 @@
 import GoComponent from "./individual-games/go-page"
 import ChessComponent from "./individual-games/chess-page"
+import Connect4Component from "./individual-games/connect-four-page"
+import SudokuComponent from "./individual-games/sudoku-page"
 
 export default function GameHolder() {
   return (
@@ -13,6 +15,8 @@ export default function GameHolder() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <GoComponent />
         <ChessComponent />
+        <Connect4Component />
+        <SudokuComponent />
       </div>
     </div>
   )
